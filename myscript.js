@@ -1,8 +1,8 @@
-function startGame(){
+$("body").ready(function(){
 	document.X = "X";
 	document.winner = null;
 	setMessage("Game Start" + " "+ document.X + "  " + "Turn");
-}
+});
 
 function setMessage(msg){
 	$("#message").text(msg);
