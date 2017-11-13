@@ -1,7 +1,7 @@
 function startGame(){
-	document.turn = "X";
+	document.X = "X";
 	document.winner = null;
-	setMessage("Game Start" + " "+ document.turn + "  " + "Turn");
+	setMessage("Game Start" + " "+ document.X + "  " + "Turn");
 }
 
 function setMessage(msg){
@@ -10,10 +10,10 @@ function setMessage(msg){
 
 function actionUser(square){
 	if(document.winner != null){
-		setMessage(document.turn + " , you won ! ");
+		setMessage(document.X + " , you won ! ");
 	}
 	else if(square.innerHTML === ''){
-		square.innerHTML = document.turn;
+		square.innerHTML = document.X;
 		switchCase();
 	}else{
 		setMessage("Already Used");
@@ -21,14 +21,14 @@ function actionUser(square){
 }
 
 function switchCase(){
-	if(checkWinner(document.turn)){
-		setMessage("Congrat" + " " + document.turn + " , you won ! ");
-		document.winner = document.turn;
+	if(checkWinner(document.X)){
+		setMessage("Congrat" + " " + document.X + " , you won ! ");
+		document.winner = document.X;
 	}
-	else if(document.turn == "X"){
-		document.turn = "O";
+	else if(document.X == "X"){
+		document.X = "O";
 	}else{
-		document.turn = "X";
+		document.X = "X";
 	}
 }
 
@@ -60,9 +60,10 @@ function getBox(i){
 $(function(){
 
 	$("#start-game").click(function(){
-		for(var i = 1 ; i <= 9 ;i++){
+		/*for(var i = 1 ; i <= 9 ;i++){
 			document.getElementById(i).innerHTML = "";
-		}
+		}*/
+		location.reload();
 	});
 
 });
