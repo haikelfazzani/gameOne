@@ -61,6 +61,10 @@ td {
     margin-bottom: 10px;
 }
 
+.btn-guess:hover { 
+	background-color: #00bcd4; 
+}
+
 #num-field {
 	width: 217px;
 	padding: 0 5px;
