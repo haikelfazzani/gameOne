@@ -12,14 +12,19 @@ $(function(){
 	$("#guess").click(function(){
 	
 		var userInput = parseInt($("#num-field").val());
+		if($("#num-field").val().length != 0){
+			if(userInput === numRand){
 
-		if(userInput === numRand){
+				$("#msg").text("congrats you won ! "+ numRand).css("background","#8bc34a").show();
 
-			$("#msg").text("congrats you won ! "+ numRand).css("background","#8bc34a").show();
+			}else if(userInput !== numRand){
 
-		}else if(userInput !== numRand){
+				$("#msg").text("wrong guess !").css("background","red").show();
+			}
+		}else if($("#num-field").val().length == 0){
 
-			$("#msg").text("wrong guess !").css("background","red").show();
+			$("#msg").text("you should enter a number").css("background","red").show();
+			
 		}
 	});
 
