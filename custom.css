@@ -1,86 +1,80 @@
-body { background-color: #00bcd4; }
-.container { 
-	float: left;
-	margin-left: 40px;
-	margin-top: 10px;
-    max-width: 270px;
-    background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Games</title>
+	<script src="jquery.js"></script>
+	<script src="myscript.js"></script>
+	<script src="guess.js"></script>
+	<script type="text/javascript" src="memory-game.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="custom.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-table{ margin: 0 auto; }
+<body>
+	<p id="signature" align="center">created by fazzani haikel</p>
+	<div class="container">
 
-#message { 
-	padding: 20px 0 7px 0;
-    font-family: fantasy;
-	text-transform: uppercase; 
-	font-size: 16px; 
-	margin: 0 auto; 
-	text-align: center; 
-	color: #607d8b;
-	letter-spacing: 1px;
-}
+		<h4 id="message">Game Start</h4>
+		<table>
 
+			<tr>
+				<td id="1" class="btn btn-primary" onclick="actionUser(this)"></td>
+				<td id="2" class="btn btn-primary" onclick="actionUser(this)"></td>
+				<td id="3" class="btn btn-primary" onclick="actionUser(this)"></td>
+			</tr>
 
-td { 
-	margin: 5px;
-	text-align: center; 
-	background-color: white; 
-}
+			<tr>
+				<td id="4" class="btn btn-primary" onclick="actionUser(this)"></td>
+				<td id="5" class="btn btn-primary" onclick="actionUser(this)"></td>
+				<td id="6" class="btn btn-primary" onclick="actionUser(this)"></td>
+			</tr>
 
-.square { 
-	height: 50px; 
-	width: 30px; 
-}
+			<tr>
+				<td id="7" class="btn btn-primary" onclick="actionUser(this)"></td>
+				<td id="8" class="btn btn-primary" onclick="actionUser(this)"></td>
+				<td id="9" class="btn btn-primary" onclick="actionUser(this)"></td>
+			</tr>
 
-.btn-primary{ 
-	font-size: 30px;
-	width: 60px; 
-	height: 60px; 
-	background-color: #607d8b;
-}
+		</table>
+		<button class="btn btn-success" id="start-game">Start Game</button>
+	</div>
 
-.btn-success { margin: 10px 0 10px 17px; background-color: #607d8b; border: 0px; outline: none; }	
+	<!-- Guess Game -->
+	<div class="container">
+		<h4 id="message">Guess A number : 1 -> 9 ! </h4>
 
-#signature { 
-	text-transform: uppercase;
-    margin-top: 20px;
-    font-family: fantasy;
-    letter-spacing: 2px;
-    color: #607d8b;
-}
-/*-----------------------------------------*/
-.btn-guess {
-	background: #607d8b;
-    color: white;
-    border: 0px;
-    margin-top: 10px;
-    line-height: 25px;
-    width: 107px;
-    font-size: 12px;
-    margin-bottom: 10px;
-}
+		<div align="center">
+			<input id="num-field" type="text" placeholder="Guess a number between 1 & 9">
+		</div>
 
-.btn-guess:hover { 
-	background-color: #00bcd4; 
-}
+		<div align="center">
+			<button class="btn-guess" id="guess">Guess</button>
+			<button class="btn-guess" id="start">Restart Game</button>
+		</div>
 
-#num-field {
-	width: 217px;
-	padding: 0 5px;
-    font-size: 11px;
-    line-height: 25px;
-    text-transform: uppercase
-}
+		<div align="center"><p id="msg">congrats you won !</p></div>
 
-#msg {
-	background-color: #8BC34A;
-    width: 217px;
-    height: 25px;
-    text-transform: uppercase;
-    padding: 5px 0px 0 10px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-}
+	</div>
+	<!-- End Guess Game -->
+
+	<!-- Memory Card Game -->
+	<div class="container">
+		<h4 id="message">Memory Card Game </h4>
+		<div id="line">
+			<div class="case"></div>
+			<div class="case"></div>
+			<div class="case"></div>
+			<div class="case"></div>
+		</div>
+		<div id="line">
+			<div class="case"></div>
+			<div class="case"></div>
+			<div class="case"></div>
+			<div class="case"></div>
+		</div>
+		<div align="center"><p id="msg-memory">congrats you won !</p></div>
+	</div>
+	<!-- End Memory Card Game -->
+</body>
+</html>
