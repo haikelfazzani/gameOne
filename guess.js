@@ -4,20 +4,20 @@ $(function(){
 	var max = 9;
 
 	function randNumber(min,max){
-		return Math.floor(Math.random()*(max-min+1)+min);
+		return parseInt(Math.floor(Math.random()*(max-min+1)+min));
 	}
 
 	var numRand = randNumber(min,max);
 
 	$("#guess").click(function(){
 	
-		var userInput = $("#num-field").val();
+		var userInput = parseInt($("#num-field").val());
 
-		if(userInput == numRand){
+		if(userInput === numRand){
 
 			$("#msg").text("congrats you won ! "+ numRand).css("background","#8bc34a").show();
 
-		}else if(userInput != numRand){
+		}else if(userInput !== numRand){
 
 			$("#msg").text("wrong guess !").css("background","red").show();
 		}
