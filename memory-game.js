@@ -29,16 +29,18 @@ $(function(){
 
 	function checkNumberItemSelected(){
 		//console.log($(".item:first").length);
+		var cnt = 0;
 		if($(".item").length == 2){
 			var num_one = parseInt($(".item:first").text());
 			var num_two = parseInt($(".item:last").text());
-
+			
 			if(num_one == num_two){
-				var points = 0;
+				cnt++;
 				$(".item").each(function(){
-					$(this).css("opacity","-1").removeClass("item");
+					$(this).css("opacity","-1").removeAttr("id");
 					$(this).css("cursor","none");
-					$("#score").text("Points : " + (points+=5));
+					setInterval(increasePoints(),1000);
+					checkWinner();
 				});
 			}
 		}
@@ -48,7 +50,23 @@ $(function(){
 		}
 
 	}
+
+	function increasePoints(){
+		var points = 0;
+		$(".case").each(function(){
+			if(!$(this).attr("id")){
+				$("#score").text("Points : " + (points+=5));
+			}
+		});
+	}
+
 	$("#msg-memory").hide();
+	function checkWinner(){
+		if($("#rm").length == 0){
+			$("#msg-memory").show();
+		}
+	}
+	
 	// The Game
 	function startGame(){
 		assignCaseNum();
