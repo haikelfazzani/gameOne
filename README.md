@@ -1,3 +1,3 @@
 # gameOne
-Tic Tac Toe Game, Enjoy !
+Games, Enjoy !
 Link For Game : https://haikelfazzani.github.io/gameOne/index.html
