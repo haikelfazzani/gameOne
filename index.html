@@ -1,91 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Games</title>
+	<title>Games</title>	
+  	
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  	<link rel="stylesheet" type="text/css" href="custom.css">
+  	
+</head>
+
+<body>	
+
+	<div class="container centered">
+		<h2 id="signature" align="center">created by fazzani haikel</h2>
+		<div class="row">
+			<div class="col-4">
+
+				<h4 id="game-title">Game Start</h4>
+				<table>
+					<tr>
+						<td id="1" class="btn btn-primary" onclick="actionUser(this)"></td>
+						<td id="2" class="btn btn-primary" onclick="actionUser(this)"></td>
+						<td id="3" class="btn btn-primary" onclick="actionUser(this)"></td>
+					</tr>
+
+					<tr>
+						<td id="4" class="btn btn-primary" onclick="actionUser(this)"></td>
+						<td id="5" class="btn btn-primary" onclick="actionUser(this)"></td>
+						<td id="6" class="btn btn-primary" onclick="actionUser(this)"></td>
+					</tr>
+
+					<tr>
+						<td id="7" class="btn btn-primary" onclick="actionUser(this)"></td>
+						<td id="8" class="btn btn-primary" onclick="actionUser(this)"></td>
+						<td id="9" class="btn btn-primary" onclick="actionUser(this)"></td>
+					</tr>
+
+				</table>
+				
+				<button class="btn btn-success" id="start-game">Start Game</button>			
+			</div>
+
+			<!-- Guess Game -->
+			<div class="col-4">
+				<h4 id="game-title">Guess A number : 1 -> 9 ! </h4>
+
+				<div align="center">
+					<input id="num-field" type="text" placeholder="Guess a number between 1 & 9">
+				</div>
+
+				<div align="center">
+					<button class="btn-guess" id="guess">Guess</button>
+					<button class="btn-guess" id="start">Restart Game</button>
+				</div>
+
+				<div align="center"><p id="msg">congrats you won !</p></div>
+
+			</div>
+			<!-- End Guess Game -->
+
+			<!-- Memory Card Game -->
+			<div class="col-4">
+				<h4 id="game-title">Memory Card Game </h4>
+				
+				<div id="line">
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+				</div>
+
+				<div id="line">
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+				</div>
+
+				<div id="line">
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+					<div class="case" id="rm"></div>
+				</div>
+
+				<div id="score">Points :</div>
+				<div align="center"><p id="msg-memory">congrats you won !</p></div>
+			</div>
+			<!-- End Memory Card Game -->
+		</div>
+	</div>
+
+
 	<script src="jquery.js"></script>
 	<script src="myscript.js"></script>
 	<script src="guess.js"></script>
 	<script type="text/javascript" src="memory-game.js"></script>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel="stylesheet" type="text/css" href="custom.css">
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-	<p id="signature" align="center">created by fazzani haikel</p>
-	<div class="container">
-
-		<h4 id="message">Game Start</h4>
-		<table>
-
-			<tr>
-				<td id="1" class="btn btn-primary" onclick="actionUser(this)"></td>
-				<td id="2" class="btn btn-primary" onclick="actionUser(this)"></td>
-				<td id="3" class="btn btn-primary" onclick="actionUser(this)"></td>
-			</tr>
-
-			<tr>
-				<td id="4" class="btn btn-primary" onclick="actionUser(this)"></td>
-				<td id="5" class="btn btn-primary" onclick="actionUser(this)"></td>
-				<td id="6" class="btn btn-primary" onclick="actionUser(this)"></td>
-			</tr>
-
-			<tr>
-				<td id="7" class="btn btn-primary" onclick="actionUser(this)"></td>
-				<td id="8" class="btn btn-primary" onclick="actionUser(this)"></td>
-				<td id="9" class="btn btn-primary" onclick="actionUser(this)"></td>
-			</tr>
-
-		</table>
-		<button class="btn btn-success" id="start-game">Start Game</button>
-	</div>
-
-	<!-- Guess Game -->
-	<div class="container">
-		<h4 id="message">Guess A number : 1 -> 9 ! </h4>
-
-		<div align="center">
-			<input id="num-field" type="text" placeholder="Guess a number between 1 & 9">
-		</div>
-
-		<div align="center">
-			<button class="btn-guess" id="guess">Guess</button>
-			<button class="btn-guess" id="start">Restart Game</button>
-		</div>
-
-		<div align="center"><p id="msg">congrats you won !</p></div>
-
-	</div>
-	<!-- End Guess Game -->
-
-	<!-- Memory Card Game -->
-	<div class="container">
-		<h4 id="message">Memory Card Game </h4>
-		
-		<div id="line">
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-		</div>
-
-		<div id="line">
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-		</div>
-
-		<div id="line">
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-			<div class="case" id="rm"></div>
-		</div>
-
-		<div id="score">Points :</div>
-		<div align="center"><p id="msg-memory">congrats you won !</p></div>
-	</div>
-	<!-- End Memory Card Game -->
 </body>
 </html>
