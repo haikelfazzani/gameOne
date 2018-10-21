@@ -1,6 +1,4 @@
-# gameOne
-Games, Enjoy !
-Link For Game : https://haikelfazzani.github.io/gameOne/index.html
+<pLink For Game : <a href="https://haikelfazzani.github.io/gameOne/index.html" target="_blank">Click here</a></p>
 
 <h4>List of games</h4>
 <ul>   
