@@ -1,6 +1,6 @@
-<p>Link For Game : 
+<h3>Link For Games : 
   <a href="https://haikelfazzani.github.io/gameOne/index.html" target="_blank">Click here</a>
-</p>
+</h3>
 
 <h4>List of games</h4>
 <ul>   
